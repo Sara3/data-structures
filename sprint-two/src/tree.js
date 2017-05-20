@@ -1,9 +1,8 @@
 var Tree = function(value) {
   var newTree = {};
   newTree.value = value;
-  extend(newTree, treeMethods);
   newTree.children = [];
-    
+  extend(newTree, treeMethods);
   return newTree;
 };
 
@@ -21,13 +20,8 @@ treeMethods.addChild = function(value) {
   this.children.push(treeObject);
 };
 
-// treeMethods.contains = function(target) {
-//   //
-// };
-
 treeMethods.contains = function(target) {
   let bool = false;
-
   var iterate = function (obj) {
     if (obj.value === target) {
       bool = true;
@@ -41,10 +35,7 @@ treeMethods.contains = function(target) {
   };
    
   iterate(this);
-
   return bool;
- 
-
 };
 
 
